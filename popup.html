@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ScreenBot</title>
+  <style>
+    body { font-family: sans-serif; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h3>ScreenBot</h3>
+  <label>Intervalo (min): <input id="interval" type="number" value="5" /></label>
+  <button id="save">Guardar</button>
+  <script>
+    document.getElementById("save").onclick = () => {
+      const min = parseInt(document.getElementById("interval").value);
+      chrome.storage.sync.set({ interval: min * 60000 }, () => {
+        alert("Intervalo actualizado");
+      });
+    };
+  </script>
+</body>
+</html>

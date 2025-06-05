@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "ScreenBot",
+  "version": "1.0",
+  "description": "Captura pantallas y recibe ideas útiles.",
+  "permissions": ["storage", "notifications", "scripting", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
